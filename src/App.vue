@@ -6,7 +6,7 @@
         <TheSidebar></TheSidebar>
       </aside>
       <main class="wrapper-inner">
-        <div>asdasdadasd</div>
+        <div class="font-black text-2xl">Account</div>
       </main>
     </div>
   </div>
