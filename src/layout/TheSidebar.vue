@@ -21,7 +21,7 @@
           {{ item.title }}
           <template #dropdown v-if="item.dropdown">
             <div v-for="(sub, index) in item.route" :key="index">
-              <SidebarItem :active="sub.path === $route.path" @toggle="$router.push(sub.path)">
+              <SidebarItem :active="sub.path === $route.path" @toggle="$router.push(sub.path)" :dropdown-open="item.isOpen">
                 {{ sub.title }}
               </SidebarItem>
             </div>

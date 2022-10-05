@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="menu-item" :class="[itemActive]" @click="$emit('toggle')">
+    <div class="menu-item" :class="[itemActive, props.dropdownOpen ? '' : 'my-6']" @click="$emit('toggle')">
       <div class="flex items-center justify-center">
         <slot name="icon-start"> </slot>
       </div>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div class="py-2 bg-green-50" v-if="props.dropdownOpen">
+    <div class="pt-3 bg-green-50" v-if="props.dropdownOpen">
       <slot name="dropdown"></slot>
     </div>
   </div>
@@ -56,7 +56,7 @@ const itemActive = computed(() => {
 
 <style scoped lang="scss">
 .menu-item {
-  @apply border-l-4 border-transparent grid grid-cols-6 gap-3 w-full pl-5 pr-3 py-1 my-6 cursor-pointer  select-none transition duration-300 hover:text-green-400;
+  @apply border-l-4 border-transparent grid grid-cols-6 gap-3 w-full pl-5 pr-3 py-2 cursor-pointer  select-none transition duration-300 hover:text-green-400;
 }
 
 .menu-item.active {
